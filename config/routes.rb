@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :concerts
   resources :events
   resources :bands
   get 'home/index'
