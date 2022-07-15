@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  n_menbers: 1
+  date_debut: 2022-07-14
+  type_band: 1
+  name: MyString
+
+two:
+  n_menbers: 1
+  date_debut: 2022-07-14
+  type_band: 1
+  name: MyString
