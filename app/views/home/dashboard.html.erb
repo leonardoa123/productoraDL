@@ -1,0 +1,29 @@
+<h1>Dashboard</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>N menbers</th>
+      <th>Date debut</th>
+      <th>Type band</th>
+      <th>Quantity Concerts</th>
+      <th>Total Audience</th>
+      <th>Date Debut DL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bands.each do |band| %>
+      <tr>
+        <td><%= band.name %></td>
+        <td><%= band.n_menbers %></td>
+        <td><%= band.date_debut %></td>
+        <td><%= band.type_band %></td>
+        <td><%= band.q_concerts %></td>
+        <td><%= band.q_total_audience %></td>
+        <td><%= band.date_debut_dl %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
