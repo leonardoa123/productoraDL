@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-erd', group: :development
+
+# 15-07-2022
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
