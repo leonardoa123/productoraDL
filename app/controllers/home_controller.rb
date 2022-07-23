@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    @bands = Band.order(:name)
+    @bands = Band.order(:name).includes(:concerts)
   end
 end

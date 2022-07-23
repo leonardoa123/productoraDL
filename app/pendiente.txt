@@ -1,0 +1,8 @@
+
+1) mostrar la cantidad de conciertos de cada banda (ok)
+2) mostrar la fecha del primer concierto de cada banda -> fecha debut en la productora DL (ok)
+3) mostrar la cantidad total de asistentes (suma de todos los asistentes a los conciertos de cada banda) (ok)
+4) mostrar cantidad de conciertos del mes en curso
+5) último concierto con formato de fecha “Año - Mes en palabras - día en palabras .-< strftime
+6) concierto mas concurrido de cada banda (q_audience)
+7) concierto mas largo de cada banda (duration)
