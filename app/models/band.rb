@@ -6,6 +6,8 @@ class Band < ApplicationRecord
 
     has_many :concerts, dependent: :destroy
 
+    has_many :events, through: :concerts, dependent: :destroy
+
     def to_s
         self.name
     end
@@ -17,9 +19,11 @@ class Band < ApplicationRecord
 
     # mostrar la fecha del primer concierto de cada banda
 
+    # fecha =  Tabla Eventos
+    # band.events.order(:date_event).limit(1)
     def date_debut_dl
         if self.concerts.present?
-            "#{self.concerts.first.event.name} #{self.concerts.first.event.date_event.strftime("%d/%m/%Y")}"
+            "#{self.events.order(:date_event).limit(1).first.name} #{self.events.order(:date_event).limit(1).first.date_event.strftime("%d/%m/%Y")}"
         else
             "--NO DEBUT IN DL--"
         end
