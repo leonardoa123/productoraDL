@@ -52,10 +52,30 @@ class Band < ApplicationRecord
     # último concierto con formato de fecha “Año - Mes en palabras - día en palabras
     def last_concert
         if self.concerts.present?
-            "#{self.concerts.last.event.date_event.strftime("%d/%m/%Y")}"
+            # "#{self.concerts.last.event.date_event.strftime("%d/%m/%Y")}"
+            "#{self.events.order(:date_event).last.date_event.strftime("%Y - %B - %A")}"
+
         else
             "--NO CONCERT--"
         end
     end
+    def max_audiencedl
+        if self.concerts.present?
+           self.concerts.maximum(:q_audience)
+        else
+            "--NO CONCERT--"
+        end
+    end
+    def max_durationdl
+        if self.concerts.present?
+            duration = self.concerts.maximum(:duration)
+            concert = self.concerts.find_by(duration: duration)
+            "#{concert.event.name}  #{duration.strftime("%H:%M")}"
+         else
+             "--NO CONCERT--"
+        end
+    
+    end
+
 
 end
